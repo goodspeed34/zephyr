@@ -45,5 +45,11 @@
 		#size-cells = <1>;
 		compatible = "simple-bus";
 		interrupt-parent = <&intc>;
+
+		uart0: serial@44010000 {
+			compatible = "hisilicon,v151-uart";
+			reg = <0x44010000 0xfff>;
+			status = "okay";
+		};
 	};
 };

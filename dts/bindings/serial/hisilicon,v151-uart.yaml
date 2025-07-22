@@ -1,0 +1,9 @@
+description: HISILICON V151 UART
+
+compatible: "hisilicon,v151-uart"
+
+include: uart-controller.yaml
+
+properties:
+  reg:
+    required: true
