@@ -1,0 +1,49 @@
+/*
+ * Copyright (c) 2025 Gong Zhile <gongzl@stu.hebust.edu.cn>
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+#include <freq.h>
+
+/ {
+	#address-cells = <1>;
+	#size-cells = <1>;
+
+	cpus {
+		#address-cells = <1>;
+		#size-cells = <0>;
+
+		cpu: cpu@0 {
+			clock-frequency = <DT_FREQ_M(240)>;
+			compatible = "riscv";
+			riscv,isa = "rv32imafc_zicsr";
+			reg = <0>;
+
+			intc: interrupt-controller {
+				compatible = "riscv,cpu-intc";
+				interrupt-controller;
+				#address-cells = <1>;
+				#interrupt-cells = <1>;
+			};
+		};
+	};
+
+	sram0: memory@a00000 {
+		compatible = "mmio-sram";
+		reg = <0xa00000 0x85f00>;
+	};
+
+	flash0: flash@230300 {
+		/* The bootloader reserved 0x300 from the total 4 MiB flash. */
+		compatible = "soc-nv-flash";
+		reg = <0x230300 0x3ffd00>;
+	};
+
+	soc {
+		#address-cells = <1>;
+		#size-cells = <1>;
+		compatible = "simple-bus";
+		interrupt-parent = <&intc>;
+	};
+};

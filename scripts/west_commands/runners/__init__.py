@@ -66,6 +66,7 @@ _names = [
     'teensy',
     'trace32',
     'uf2',
+    'ws63flash',
     'xsdb',
     'xtensa',
     # zephyr-keep-sorted-stop

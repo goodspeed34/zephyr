@@ -1,0 +1,6 @@
+board:
+  name: bearpi_pico_h3863
+  full_name: BEARPI_PICO_H3863
+  vendor: bearpi
+  socs:
+    - name: ws63

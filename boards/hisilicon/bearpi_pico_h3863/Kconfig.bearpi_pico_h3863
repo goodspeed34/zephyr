@@ -1,0 +1,5 @@
+# Copyright (c) 2025 Gong Zhile <gongzl@stu.hebust.edu.cn>
+# SPDX-License-Identifier: Apache-2.0
+
+config BOARD_BEARPI_PICO_H3863
+	select SOC_WS63

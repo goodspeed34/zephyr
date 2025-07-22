@@ -1,0 +1,9 @@
+# Copyright (c) 2025 Gong Zhile <gongzl@stu.hebust.edu.cn>
+# SPDX-License-Identifier: Apache-2.0
+
+config SOC_WS63
+	bool
+
+config SOC
+	default "ws63" if SOC_WS63
+
