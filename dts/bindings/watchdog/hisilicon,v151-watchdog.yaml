@@ -1,0 +1,16 @@
+# Copyright (c) 2025, Gong Zhile
+# SPDX-License-Identifier: Apache-2.0
+
+description: Hisilicon v151 Watchdog
+
+compatible: "hisilicon,v151-watchdog"
+
+include: base.yaml
+
+properties:
+  reg:
+    required: true
+
+  # clocks:
+  #   required: true
+  #   description: Crystal oscillator source clock

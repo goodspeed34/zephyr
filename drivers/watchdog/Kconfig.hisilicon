@@ -1,0 +1,9 @@
+# Copyright (c) 2025, Gong Zhile
+# SPDX-License-Identifier: Apache-2.0
+
+config WDT_HISILICON_V151
+       bool "Hisilicon v151 Watchdog driver"
+       default y
+       depends on DT_HAS_HISILICON_V151_WATCHDOG_ENABLED
+       select HAS_WDT_DISABLE_AT_BOOT
+       select HAS_WDT_NO_CALLBACKS
